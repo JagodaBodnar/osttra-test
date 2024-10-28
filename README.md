@@ -1,49 +1,52 @@
-## About project
+# $\color{rgb(60,143,201)}{\textsf{About project}}$
 
 Application created for Osstra test assignment. Allows to post messages, 
 get new/all messages, 
 delete one or multiple messages.
 
-## Technologies and tools
+## $\color{rgb(107, 187, 242)}{\textsf{Technologies and tools}}$
 
 Java, Spring Boot, Maven, Jacoco, Junit5, testcontainers, postgresql
 
-## How to run project
-Make sure you also have installed docker (on Windows docker desktop).
-Make sure you have jdk (you can confirm that by entering java -version) 
-on your computer if you don't you can download one [here](https://www.oracle.com/java/technologies/downloads/#java21)
-Make sure to set environment variables.
+## $\color{rgb(107, 187, 242)}{\textsf{How to run project}}$
 
-Windows:
-You can go directly to EnvironmentVariables and add it directly to system variables or enter in cmd:
+> [!NOTE]
+> Make sure you also have installed docker (on Windows docker desktop).
+>Make sure you have jdk (you can confirm that by entering java -version)
+>on your computer if you don't you can download one [here](https://www.oracle.com/java/technologies/downloads/#java21)
+>Make sure to set environment variables.
+>Windows:
+>You can go directly to EnvironmentVariables and add it directly to system variables or enter in cmd:
+>```
+>set JAVA_HOME=C:\Program Files\Java\jdk-21.0.4 - adjust if you using different version
+>set PATH=%PATH%;%JAVA_HOME%\bin
+>```
+>Linux/Mac:
+>```
+>export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-21.0.4.jdk/Contents/Home - adjust if you using different version
+>export PATH=$JAVA_HOME/bin:$PATH
+>```
+>Recommended version 21.0.4.
 
-```
-set JAVA_HOME=C:\Program Files\Java\jdk-21.0.4 - adjust if you using different version
-set PATH=%PATH%;%JAVA_HOME%\bin
-```
-
-Linux/Mac:
-
-```
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-21.0.4.jdk/Contents/Home - adjust if you using different version
-export PATH=$JAVA_HOME/bin:$PATH
-```
-
-Recommended version 21.0.4.
 Once you have everything installed and set up
-navigate to place where you unpacked project.
+clone repository.
 In order to do that use command:
 
 ```
-    cd path-to-unpacked-zip
+    git clone http or ssh address from repository 
 ```
+> [!IMPORTANT]  
+> You need to add file .env (content provided by email) and secret.yml inside resources 
+>in main folder content also provided by email.
 
-and enter command:
-
+After creating files enter command in the main folder of repository:
+```
+    maven clean install
+```
 ```
  docker-compose up
 ```
-in new window run another command:
+in new terminal window run another command:
 ```
  java -jar target/osttra-test-0.0.1-SNAPSHOT.jar
 ```
@@ -68,11 +71,17 @@ choco install curl
 
 ## How to open code and run application from IDE
 
-Downloaded and unpacked zip open in IDE of your choosing I recommend Intellij where you can follow:
-
+Clone project from github:
+```
+    git clone http or ssh address of the repository 
+```
 ```
   File ⟶ Open ⟶ navigate to place where you unpacked folder and choose osttra-test folder
 ```
+
+> [!IMPORTANT]  
+> You need to add file .env (content provided by email) and secret.yml inside resources
+>in main folder content also provided by email.
 
 The easiest way to run application is by opening OsttraTestApplication.kt
 that exists in src/main/kotlin/org.osttra package and clicking
