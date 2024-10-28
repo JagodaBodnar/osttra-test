@@ -143,7 +143,7 @@ Request body template:
 
     Expected response code: 201 - Created
 
-### $\color{rgb(245, 179, 66)}{\textsf{2. GET /api/messages/new/{recipient}}}$
+### $\color{rgb(245, 179, 66)}{\textsf{2. GET /api/messages/new/`{`recipient`}`}}$
 
 Returns a list of all new messages for specified id of recipient.
 You can also specify how many elements you want per page or page number you want to display.
@@ -170,7 +170,7 @@ Expected response structure:
 
     Expected response code: 200 - OK
 
-### $\color{rgb(245, 179, 66)}{\textsf{3. GET /api/messages/all/{recipient}}}$
+### $\color{rgb(245, 179, 66)}{\textsf{3. GET /api/messages/all/`{`recipient`}`}}$
 
    Returns a list of all messages for specified id of recipient.
    You can also pass RequestParams specifying page number and size like in point 2. 
@@ -204,7 +204,7 @@ Expected response structure:
 
     Expected response code: 200 - OK
 
-### $\color{rgb(245, 179, 66)}{\textsf{4. DELETE /api/messages/{id}}}$
+### $\color{rgb(245, 179, 66)}{\textsf{4. DELETE /api/messages/`{`id`}`}}$
 
    Removes from database message with specified id. 
    If id does not exist response will be 404.
