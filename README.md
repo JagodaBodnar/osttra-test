@@ -33,15 +33,16 @@ clone repository.
 In order to do that use command:
 
 ```
-    git clone http or ssh address from repository 
+   git clone https://github.com/JagodaBodnar/osttra-test.git  // you can use also ssh
 ```
+
 > [!IMPORTANT]  
 > You need to add file .env (content provided by email) and secret.yml inside resources 
 >in main folder content also provided by email.
 
 After creating files enter command in the main folder of repository:
 ```
-    maven clean install
+ maven clean install
 ```
 ```
  docker-compose up
@@ -68,12 +69,11 @@ and then:
 ```
 choco install curl
 ```
-
-## How to open code and run application from IDE
+## $\color{rgb(107, 187, 242)}{\textsf{How to open code and run application from IDE}}$
 
 Clone project from github:
 ```
-    git clone http or ssh address of the repository 
+  git clone http or ssh address of the repository 
 ```
 ```
   File ⟶ Open ⟶ navigate to place where you unpacked folder and choose osttra-test folder
@@ -91,7 +91,7 @@ or by pressing combination Ctrl + Shift + F10.
 Either way you should see in the terminal the same thing as presented in the first approach.
 Here however you can review code.
 
-### Tests
+## $\color{rgb(107, 187, 242)}{\textsf{Tests}}$
 
 Tests created for that project are unit tests to run tests you can either enter command:
 
@@ -107,7 +107,7 @@ or
 
 Or you can run them directly in the test units.
 
-# Using application
+# $\color{rgb(107, 187, 242)}{\textsf{Using application}}$
 
 ## Users 
 
