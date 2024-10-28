@@ -1,0 +1,14 @@
+version: '1.0'
+services:
+  postgres:
+    image: 'postgres:15'
+    container_name: "osttra-task"
+    environment:
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - ./data/pgdata:/var/postgressql/data
+    ports:
+      - 5432:5432
+    restart: always
