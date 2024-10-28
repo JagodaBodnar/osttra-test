@@ -109,12 +109,13 @@ Or you can run them directly in the test units.
 
 # $\color{rgb(107, 187, 242)}{\textsf{Using application}}$
 
-## Users 
+## $\color{rgb(245, 179, 66)}{\textsf{Users}}$
 
 Application contains user table with prepopulated 3 users that you can use for message fetching and posting.
 If you however are not satisfied you can create your own user using endpoint:
 
-1. POST /api/users
+### $\color{rgb(245, 179, 66)}{\textsf{1. POST /api/users}}$
+
    Request body template:
 
  ```
@@ -127,9 +128,9 @@ If you however are not satisfied you can create your own user using endpoint:
 
 in response, you will receive UUID of created user that you can use to fetch data.
 
-## Messages - endpoints
+## $\color{rgb(245, 179, 66)}{\textsf{Messages - endpoints}}$
 
-### 1. POST /api/messages
+### $\color{rgb(245, 179, 66)}{\textsf{1. POST /api/messages}}$
 
 Request body template:
 
@@ -142,7 +143,7 @@ Request body template:
 
     Expected response code: 201 - Created
 
-### 2. GET /api/messages/new/{recipient}
+### $\color{rgb(245, 179, 66)}{\textsf{2. GET /api/messages/new/{recipient}}}$
 
 Returns a list of all new messages for specified id of recipient.
 You can also specify how many elements you want per page or page number you want to display.
@@ -169,7 +170,8 @@ Expected response structure:
 
     Expected response code: 200 - OK
 
-### 3. GET /api/messages/all/{recipient}
+### $\color{rgb(245, 179, 66)}{\textsf{3. GET /api/messages/all/{recipient}}}$
+
    Returns a list of all messages for specified id of recipient.
    You can also pass RequestParams specifying page number and size like in point 2. 
    ```
@@ -202,14 +204,15 @@ Expected response structure:
 
     Expected response code: 200 - OK
 
-### 4. DELETE /api/messages/{id}
+### $\color{rgb(245, 179, 66)}{\textsf{4. DELETE /api/messages/{id}}}$
+
    Removes from database message with specified id. 
    If id does not exist response will be 404.
 
 ```
     Expected response code: 204 - No Content
 ```
-### 5. DELETE /api/messages
+### $\color{rgb(245, 179, 66)}{\textsf{5. DELETE /api/messages}}$
 
    Removed multiple messages at once according to provided list of ids.
 
@@ -223,8 +226,7 @@ Request body template:
 
     Expected response code: 204 - No content
 
-
-## Folder structure
+## $\color{rgb(107, 187, 242)}{\textsf{Folder structure}}$
 
 ```bash
 ├───main
