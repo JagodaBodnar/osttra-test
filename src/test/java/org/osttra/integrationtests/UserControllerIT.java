@@ -64,7 +64,7 @@ public class UserControllerIT {
 
     @Test
     public void shouldThrowExceptionWhenEmailIsRepeated() {
-        ResponseEntity<UUID> result = restTemplate.postForEntity("/api/users",
+        restTemplate.postForEntity("/api/users",
                 new UserRequestDto("Henrik", "Nordin", "henrik.nordin@gmail.com"),
                 UUID.class);
         ResponseEntity<EmailAlreadyExistsException> result2 = restTemplate.postForEntity("/api/users",

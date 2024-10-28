@@ -14,7 +14,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlGroup;
 import org.springframework.test.web.servlet.MockMvc;
@@ -39,8 +38,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class MessageControllerIT {
     @Autowired
     MockMvc mockMvc;
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
     @Autowired
     private MessageRepository messageRepository;
 

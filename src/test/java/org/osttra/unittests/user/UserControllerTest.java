@@ -58,7 +58,6 @@ public class UserControllerTest {
                 "Eriksson",
                 "henrik.eriksson@gmail.com");
         String jsonRequest = objectMapper.writeValueAsString(userRequestDto);
-        UUID expectedUUID = UUID.fromString("042484f0-be2f-49b1-a741-6962ef991718");
         when(messageFacade.createUser(userRequestDto))
                 .thenThrow(new EmailAlreadyExistsException(
                         String.format(Messages.EMAIL_ALREADY_EXISTS,"henrik.eriksson@gmail.com")));

@@ -3,7 +3,6 @@ package org.osttra.unittests.message;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
-import org.mockito.Mock;
 import org.osttra.exceptions.Messages;
 import org.osttra.message.controller.MessageController;
 import org.osttra.message.dtos.IdsRequestDto;
@@ -16,7 +15,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.hateoas.PagedModel;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -40,8 +38,6 @@ public class MessageControllerTest {
     MockMvc mockMvc;
     @MockBean
     MessageFacade messageFacade;
-    @Mock
-    private PagedModel<?> pagedModel;
     @Autowired
     private ObjectMapper objectMapper;
 
@@ -114,7 +110,6 @@ public class MessageControllerTest {
     @DisplayName("When get new messages return 200 status and 1 new message.")
     public void shouldReturnOneNewMessageAndStatus200_whenGetNewMessages() throws Exception {
         /*ARRANGE*/
-        UUID recipientId = UUID.fromString("042484f0-be2f-49b1-a741-6962ef991718");
         MessageResponseDto messageResponseDto = new MessageResponseDto(2L,
                 "Kind reminder to register time.",
                 LocalDateTime.now());
@@ -134,7 +129,6 @@ public class MessageControllerTest {
     @DisplayName("When get all messages return 200 status and 2 messages.")
     public void shouldReturnTwoMessagedAndStatus200_whenGetAllMessages() throws Exception {
         /*ARRANGE*/
-        UUID recipientId = UUID.fromString("042484f0-be2f-49b1-a741-6962ef991718");
         MessageResponseDto messageResponseDto = new MessageResponseDto(2L,
                 "Kind reminder to register time.",
                 LocalDateTime.now());
@@ -167,7 +161,6 @@ public class MessageControllerTest {
     @DisplayName("When delete more messages return 204 status.")
     public void shouldReturnStatus204_whenDeleteMoreMessages() throws Exception {
         /*ARRANGE*/
-        UUID recipientId = UUID.fromString("042484f0-be2f-49b1-a741-6962ef991718");
         IdsRequestDto messageRequestDto = new IdsRequestDto(List.of(2L,3L));
         String jsonRequest = objectMapper.writeValueAsString(messageRequestDto);
 

@@ -64,7 +64,7 @@ public class MessageServiceTest {
 
     @Test
     @DisplayName("When delete one message with non existing id throw MessageNotFoundException.")
-    public void shouldReturnStatus400_whenDeleteMessageWithIdThatNotExists() throws Exception {
+    public void shouldReturnStatus400_whenDeleteMessageWithIdThatNotExists() {
         /*ARRANGE*/
         when(messageRepository.findById(4L))
                 .thenThrow(new MessageNotFoundException(String.format(Messages.MESSAGE_WITH_ID_NOT_FOUND,4L)));

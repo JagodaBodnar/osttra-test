@@ -40,7 +40,7 @@ public class MessageFacadeIT {
     })
 
     @DisplayName("Should throw MessageNotFoundException when delete message with id that doesn't exist.")
-    public void shouldReturn404Status_whenDeletedIdThatDoesNotExist() throws Exception {
+    public void shouldReturn404Status_whenDeletedIdThatDoesNotExist() {
         /*ACT AND ASSERT*/
         assertThrows(MessageNotFoundException.class, () -> messageFacade.deleteMessage(5L));
     }
