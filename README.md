@@ -148,7 +148,7 @@ Request body template:
 Returns a list of all new messages for specified id of recipient.
 You can also specify how many elements you want per page or page number you want to display.
 
-### $\color{rgb(245, 179, 66)}{\textsf{/api/messages/new/\\{recipient\\}?size=2&page=1}}$
+### $\color{rgb(245, 179, 66)}{\textsf{/api/messages/new/\\{recipient\\}?size=2\\&page=1}}$
 
 Expected response structure:
 
